@@ -6,7 +6,7 @@ $(function () {
         dataType: 'jsonp',
         success: function (response) {
             for ( let i = 0; i < response.courses.completed.length; i++ ) {
-                $('#badges').append('<div class="course"></div>');
+                $('#badges').append('<div class="course"><h3>' + response.courses.completed[i].title + '</h3></div>');
             }
         }
     });
